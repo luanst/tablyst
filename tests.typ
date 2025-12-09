@@ -12,7 +12,6 @@
 #let prooftable = (..args) => prooftable(proof-rules: proof-rules, ..args)
 
 #prooftable(
-  proofstep(goal: $x = 7$),
   proofstep(goal: $P and Q -> Q and P$, rule: "ImplIntro"),
   proofstep(ctx: (H1: $P and Q$), goal: $Q and P$, rule: (AndElim: "H1")),
   proofstep(ctx: (H2: $P$, H3: $Q$), goal: $Q and P$, rule: "AndIntro"),
